@@ -1,0 +1,3 @@
+# Reinit schemas
+POST http://localhost:8092/schemas/init
+Content-Type: application/json

@@ -1,0 +1,6 @@
+{
+  "type" : "enum",
+  "name" : "ProcessStatus",
+  "namespace" : "hu.rb.kafka.model.process",
+  "symbols" : [ "PROCESS_STARTED", "PROCESS_SUCCESS", "PROCESS_FAILED", "ALREADY_PROCESSED" ]
+}

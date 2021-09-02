@@ -1,0 +1,17 @@
+<configuration>
+    <schemaRegistryUrls>
+        <param>${env:SCHEMA_REGISTRY_URL}</param>
+    </schemaRegistryUrls>
+    <subjects>
+        <process-result-schema>avro/process-result.avsc</process-result-schema>
+    </subjects>
+    <references>
+        <process-result-schema>
+            <reference>
+                <name>status</name>
+                <subject>process-status</subject>
+                <version>1</version>
+            </reference>
+        </process-result-schema>
+    </references>
+</configuration>

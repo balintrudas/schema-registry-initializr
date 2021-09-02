@@ -1,0 +1,9 @@
+{
+  "type": "enum",
+  "name": "ValidationStatus",
+  "namespace" : "hu.rb.kafka.model.validation",
+  "symbols": [
+    "FAILED",
+    "SUCCESS"
+  ]
+}

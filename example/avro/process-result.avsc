@@ -1,0 +1,18 @@
+{
+  "type" : "record",
+  "name" : "ProcessResult",
+  "namespace" : "hu.rb.kafka.model.process",
+  "fields" : [ {
+    "name" : "status",
+    "type" : "ProcessStatus"
+  }, {
+    "name" : "sourceTopic",
+    "type" : "string"
+  }, {
+    "name" : "timestamp",
+    "type" : "long"
+  }, {
+    "name" : "messageId",
+    "type" : "string"
+  } ]
+}

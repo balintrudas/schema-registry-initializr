@@ -1,0 +1,26 @@
+<configuration>
+    <schemaRegistryUrls>
+        <param>http://localhost:8081</param>
+    </schemaRegistryUrls>
+    <userInfoConfig>${schemaRegistryBasicAuthUserInfo}</userInfoConfig>
+    <subjects>
+        <process-status>src/main/resources/avro/process-status.avsc</process-status>
+    </subjects>
+    <schemaTypes>
+        <order>AVRO</order>
+        <product>AVRO</product>
+        <customer>AVRO</customer>
+    </schemaTypes>
+    <references>
+        <order>
+            <reference>
+                <name>com.acme.Product</name>
+                <subject>product</subject>
+            </reference>
+            <reference>
+                <name>com.acme.Customer</name>
+                <subject>customer</subject>
+            </reference>
+        </order>
+    </references>
+</configuration>

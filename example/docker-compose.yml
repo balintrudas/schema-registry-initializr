@@ -1,0 +1,38 @@
+version: '3.1'
+services:
+  schema-registry-initializr:
+    image: balintrudas/schema-registry-initializr:1.0.0
+    volumes:
+      - ./config.xml:/config.xml
+      - ./avro:/avro
+
+  # With multiple config file
+  schema-registry-initializr-multiple:
+    image: balintrudas/schema-registry-initializr:1.0.0
+    volumes:
+      - ./configs:/configs
+      - ./avro:/avro
+      - ./ssl:/ssl
+    environment:
+      SCHEMA_REGISTRY_URL: "http://host.docker.internal:8081"
+      CONFIG_PATH: "configs"
+
+  # With multiple config file over tsl
+  schema-registry-initializr-multiple_ssl:
+    image: balintrudas/schema-registry-initializr:1.0.0
+    volumes:
+      - ./configs:/configs
+      - ./avro:/avro
+      - ./ssl:/ssl
+    environment:
+      JAVA_TOOL_OPTIONS: "
+      -Djavax.net.ssl.keyStore=ssl/initializr-keystore.p12
+      -Djavax.net.ssl.keyStorePassword=password
+      -Djavax.net.ssl.keyStoreType=pkcs12
+      -Djavax.net.ssl.trustStore=ssl/initializr-truststore.p12
+      -Djavax.net.ssl.trustStorePassword=password
+      -Djavax.net.ssl.trustStoreType=pkcs12
+      -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2"
+#      -Djavax.net.debug=ssl,handshake"
+      SCHEMA_REGISTRY_URL: "https://host.docker.internal:8081"
+      CONFIG_PATH: "configs"
