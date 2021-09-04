@@ -1,5 +1,9 @@
 # ![Schema Registry Initializr](schema-logo.png) Schema Registry Initializr
 
+---
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S9EUZA93ZJJ9U)
+
 This repo provides the base java application for Schema Registry Initializr docker image. 
 The images can be found on [Docker Hub](https://hub.docker.com/), and sample Docker Compose files [here](example).
 The application uses the [kafka-schema-registry-maven-plugin](https://docs.confluent.io/platform/current/schema-registry/develop/maven-plugin.html) 
@@ -8,7 +12,7 @@ It can be used to initialize your schema registry's default state on start up or
 
 ## Docker Image reference
 
-Docker images is available [here]().
+Docker images is available [here](https://hub.docker.com/r/balintrudas/schema-registry-initializr).
 
 ## Usage
 
