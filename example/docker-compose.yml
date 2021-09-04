@@ -5,6 +5,8 @@ services:
     volumes:
       - ./config.xml:/config.xml
       - ./avro:/avro
+    environment:
+      SCHEMA_REGISTRY_URL: "http://host.docker.internal:8081"
 
   # With multiple config file
   schema-registry-initializr-multiple:
